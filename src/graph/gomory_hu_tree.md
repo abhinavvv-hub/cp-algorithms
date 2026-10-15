@@ -41,8 +41,7 @@ Two graphs $G = (V, E)$ and $G’ = (V, E’)$ are said to be flow equivalent if
 
 Algorithm 1: GomoryHuAlg(G, R)
 
-
-
+```nohighlight
 if |R| = 1 then
 
       return T = ({r}, ∅), Cr = V
@@ -61,11 +60,14 @@ else
       (Cr | r ∈ R) = ComputePartitions(R1, R2, C1_r, C2_r, r', r'')
       return T, Cr
 end if
+```
+
+
 
 ======================================================================
 
 Algorithm 2: ComputePartitions(R1, R2, C1_r, C2_r, r', r'')
-
+```nohighlight
 // We use the returned partitions, except we remove v1 and v2 from Cr' and Cr'', respectively
 For r ∈ R1, r ≠ r'
 
@@ -78,3 +80,5 @@ Cr' = C1_r' - {v1}
 Cr'' = C2_r'' - {v2}
 
 return (Cr | r ∈ R)
+```
+
